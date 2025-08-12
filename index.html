@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>EtikZeka — Geleceğin Yapay Zeka Meslekleri</title>
+
+<style>
+  :root{
+    --green-600:#2e7d32;
+    --green-500:#4caf50;
+    --bg:#f6fbf6;
+    --card:#ffffff;
+    --muted:#4b5563;
+    --maxw:1100px;
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0;
+    font-family: "Segoe UI", Roboto, Arial, sans-serif;
+    background:linear-gradient(180deg,var(--bg),#fff);
+    color:#0f1720;
+    -webkit-font-smoothing:antialiased;
+  }
+
+  /* Container & layout */
+  .container{max-width:var(--maxw);margin:0 auto;padding:20px;}
+
+  /* NAVBAR */
+  .navbar{
+    background:linear-gradient(90deg,var(--green-500),var(--green-600));
+    color:white;padding:12px 20px;border-radius:8px;display:flex;align-items:center;justify-content:space-between;
+    box-shadow:0 6px 18px rgba(46,125,50,0.10);position:sticky;top:12px;z-index:30;
+  }
+  .logo{display:flex;align-items:center;gap:10px;font-weight:700}
+  .logo .mark{width:36px;height:36px;border-radius:8px;background:rgba(255,255,255,.12);display:flex;align-items:center;justify-content:center}
+  .nav-links{display:flex;gap:16px;list-style:none;margin:0;padding:0}
+  .nav-links a{color:white;text-decoration:none;font-weight:600;opacity:.95}
+  .nav-links a:hover{text-decoration:underline;opacity:1}
+
+  /* HERO */
+  .hero{background:linear-gradient(135deg, rgba(76,175,80,0.08), rgba(46,125,50,0.04));padding:36px;border-radius:10px;margin-top:18px;text-align:center}
+  .hero h1{margin:0;font-size:1.9rem;color:var(--green-600)}
+  .hero p{margin:8px 0;color:var(--muted)}
+
+  /* Card */
+  .card{background:var(--card);border-radius:12px;padding:22px;margin:22px 0;box-shadow:0 8px 22px rgba(16,24,16,0.03)}
+  .center{text-align:center}
+  .muted{color:var(--muted)}
+
+  /* İki sütunlu dönüşümlü blok */
+  .flex-block{
+    display:flex;gap:28px;align-items:center;margin:28px 0;flex-wrap:wrap;
+    transition:transform .28s ease, box-shadow .28s ease;
+  }
+  .flex-block:hover{transform:translateY(-4px);box-shadow:0 12px 30px rgba(16,24,16,0.06)}
+  .flex-block.reverse{flex-direction:row-reverse}
+
+  .flex-block .text{flex:1 1 420px;min-width:240px}
+  .flex-block .text h3{margin:0 0 10px;color:var(--green-600)}
+  .flex-block .text p{margin:0;color:#24303a;line-height:1.6}
+
+  .flex-block .img{flex:0 0 360px;min-width:180px}
+  .flex-block .img img{width:100%;height:220px;object-fit:cover;border-radius:12px;box-shadow:0 8px 20px rgba(16,24,16,0.06);display:block}
+
+  /* Responsive: dikeyleşme */
+  @media (max-width:980px){
+    .flex-block{flex-direction:column}
+    .flex-block .img img{height:260px}
+  }
+
+  /* Projeler başlığı */
+  #projeler .card-title{margin-bottom:8px;color:var(--green-600)}
+
+  /* Takım bölümü */
+  .team-section{text-align:center;padding:20px;border-radius:12px;background:linear-gradient(180deg,#fff,#f7fff7);margin:22px 0}
+  .team-section h2{margin:0;font-size:1.6rem;color:var(--green-600)}
+  .team-section h3{margin:6px 0 18px;color:var(--muted);font-weight:500}
+
+  .team-grid{display:flex;justify-content:center;gap:14px;flex-wrap:wrap}
+  .team-member{text-align:center;width:110px}
+  .team-member img{width:72px;height:72px;border-radius:50%;object-fit:cover;border:3px solid rgba(46,125,50,0.12);transition:transform .25s ease, box-shadow .25s ease}
+  .team-member img:hover{transform:scale(1.08);box-shadow:0 8px 18px rgba(46,125,50,0.12)}
+  .team-member p{margin:8px 0 0;font-weight:600;color:var(--green-600);font-size:.9rem}
+
+  /* footer */
+  footer{background:var(--green-600);color:white;text-align:center;padding:16px;margin-top:20px;border-radius:8px}
+
+  /* small helper */
+  .small{font-size:.95rem;color:var(--muted)}
+
+  /* image captions */
+  .img p.caption{margin:8px 0 0;font-weight:700;color:#1f2937;text-align:center}
+
+</style>
+</head>
+<body>
+
+  <div class="container">
+    <!-- NAV -->
+    <nav class="navbar" role="navigation" aria-label="Ana menü">
+      <div class="logo"><div class="mark">EZ</div>EtikZeka</div>
+      <ul class="nav-links">
+        <li><a href="#hakkimda">Hakkımda</a></li>
+        <li><a href="#projeler">Projelerim</a></li>
+        <li><a href="#takim">Takım</a></li>
+        <li><a href="#iletisim">İletişim</a></li>
+      </ul>
+    </nav>
+
+    <!-- HERO -->
+    <header class="hero card" role="banner">
+      <h1>Geleceğin Yapay Zeka Meslekleri — Etik Odaklı</h1>
+      <p class="muted">EtikZeka olarak yapay zekâ etiğini koruyan ve gelecekte değer görecek rolleri derledik. Her başlıkta görev, neden gerekli olduğu ve nasıl çalıştığı detaylıdır.</p>
+    </header>
+
+    <!-- HAKKIMDA -->
+    <section id="hakkimda" class="card" aria-labelledby="hakkimda-baslik">
+      <h2 id="hakkimda-baslik">Hakkımda</h2>
+      <p>Ben Belinay Naldöven. EtikZeka şirketi kurucusuyum. Şirketimiz sizler için geleceğin mesleklerini sunarak iş seçiminizi kolaylaştırıyor. Milli Eğitim desteği ile bu mesleklere taban hazırlayacak bir müfredat hazırlanıyor. Destek sağlayan şirketler sayesinde de bu eğitimleri almış yetkili kişiler işe alınıyor.</p>
+    </section>
+
+    <!-- PROJELER (15 meslek — dönüşümlü bloklar) -->
+    <section id="projeler" class="card" aria-labelledby="projeler-baslik">
+      <h2 id="projeler-baslik" class="card-title center">Projelerim</h2>
+      <p class="center small muted">Aşağıda yapay zekâ etiğini koruyan ve gelecekte öne çıkacak 15 meslek — her biri başlık, detaylı açıklama ve ilgili görselle birlikte.</p>
+
+      <!-- 1 -->
+      <div class="flex-block">
+        <div class="text">
+          <h3>1. Yapay Zeka Etik Uzmanı</h3>
+          <p>Algoritmaların adil, şeffaf ve insan haklarına uygun olmasını sağlar. Veri kaynaklarını, model karar mekanizmalarını ve çıktıların toplumsal etkilerini değerlendirir; önyargı tespiti, düzeltme yöntemleri ve etik raporlamalar hazırlar. Disiplinler arası (hukuk, sosyoloji, veri bilimi) çalışır.</p>
+        </div>
+        <div class="img">
+          <img src="yapay-zeka-etik uzmanı" alt="Etik uzmana ait görsel">
+          <p class="caption">Etik inceleme & önyargı tespiti</p>
+        </div>
+      </div>
+
+      <!-- 2 -->
+      <div class="flex-block reverse">
+        <div class="text">
+          <h3>2. AI Denetçisi (Auditor)</h3>
+          <p>Kurumsal ve bağımsız denetimler yaparak modellerin performans, adalet ve yasal uyumluluklarını doğrular. Veri kaynaklarını izler, model sürümlerini karşılaştırır ve denetim raporları sunar. Özellikle finans, sağlık ve kamu uygulamalarında kritik rol oynar.</p>
+        </div>
+        <div class="img">
+          <img src="https://cdn.pixabay.com/photo/2024/03/02/12/11/robot-8610210_960_720.jpg" alt="Denetçi görseli">
+          <p class="caption">Bağımsız doğrulama & raporlama</p>
+        </div>
+      </div>
+
+      <!-- 3 -->
+      <div class="flex-block">
+        <div class="text">
+          <h3>3. Veri Gizliliği ve Koruma Uzmanı</h3>
+          <p>Kullanıcıların kişisel verilerinin toplanması, işlenmesi ve saklanmasında gizlilik stratejileri uygular. Anonimleştirme, veri minimizasyonu, erişim kontrolleri ve yasal uyum (KVKK/GDPR) süreçlerini yönetir; veri sızıntısı risklerini azaltır.</p>
+        </div>
+        <div class="img">
+          <img src="https://cdn.pixabay.com/photo/2023/06/15/12/20/artificial-intelligence-8064915_960_720.jpg" alt="Veri gizliliği görseli">
+          <p class="caption">Gizlilik, anonimleştirme</p>
+        </div>
+      </div>
+
+      <!-- 4 -->
+      <div class="flex-block reverse">
+        <div class="text">
+          <h3>4. Yapay Zeka Politika ve Strateji Danışmanı</h3>
+          <p>Hükümetler, STK'lar ve şirketler için AI stratejileri ve düzenleyici çerçeveler geliştirir. Toplumsal etkileri değerlendirip politika önerileri sunar; kamusal faydayı maksimize edecek rehberlik sağlar.</p>
+        </div>
+        <div class="img">
+          <img src="https://cdn.pixabay.com/photo/2023/04/04/05/36/artificial-intelligence-7898845_960_720.jpg" alt="Politika danışmanı görseli">
+          <p class="caption">Politika, düzenleme ve strateji</p>
+        </div>
+      </div>
+
+      <!-- 5 -->
+      <div class="flex-block">
+        <div class="text">
+          <h3>5. Yapay Zeka Eğitim & Müfredat Tasarımcısı</h3>
+          <p>Okullar ve kurumlar için etik odaklı AI eğitimleri ve müfredatlar hazırlar. Hem teknik hem de etik becerileri içeren kurslar geliştirir; öğretmen eğitimleri ve sertifikasyon programları düzenler.</p>
+        </div>
+        <div class="img">
+          <img src="https://cdn.pixabay.com/photo/2020/06/19/15/48/artificial-intelligence-5318950_960_720.jpg" alt="Eğitim müfredatı görseli">
+          <p class="caption">Eğitim, öğretmen eğitimi</p>
+        </div>
+      </div>
+
+      <!-- 6 -->
+      <div class="flex-block reverse">
+        <div class="text">
+          <h3>6. Veri Etiği Danışmanı</h3>
+          <p>Veri toplama ve kullanım süreçlerine etik ilkeler yerleştirir; temsiliyet, ayrımcılık riskleri ve veri şeffaflığı konularında rehberlik sağlar. Kurum içi veri kültürünü geliştirir.</p>
+        </div>
+        <div class="img">
+          <img src="https://cdn.pixabay.com/photo/2021/08/25/09/25/artificial-intelligence-6573737_960_720.jpg" alt="Veri etiği görseli">
+          <p class="caption">Etik veri kullanımı</p>
+        </div>
+      </div>
+
+      <!-- 7 -->
+      <div class="flex-block">
+        <div class="text">
+          <h3>7. AI Hukuk Danışmanı</h3>
+          <p>AI kaynaklı yasal sorumluluklar, fikri mülkiyet ve düzenleyici uyumluluk konularında danışmanlık yapar. Sözleşmeler, risk değerlendirmeleri ve yasal savunma stratejileri hazırlar.</p>
+        </div>
+        <div class="img">
+          <img src="https://cdn.pixabay.com/photo/2022/12/01/16/06/law-7631582_960_720.jpg" alt="Hukuk danışmanı görseli">
+          <p class="caption">Hukuk, uyum ve sözleşmeler</p>
+        </div>
+      </div>
+
+      <!-- 8 -->
+      <div class="flex-block reverse">
+        <div class="text">
+          <h3>8. Otonom Sistem Denetçisi</h3>
+          <p>Sürücüsüz araçlar, drone'lar ve endüstriyel otomasyon sistemleri için güvenlik ve etik denetimleri gerçekleştirir. Simülasyon, saha testleri ve onay süreçlerini yönetir.</p>
+        </div>
+        <div class="img">
+          <img src="https://cdn.pixabay.com/photo/2020/02/07/20/59/artificial-intelligence-4827098_960_720.jpg" alt="Otonom denetçi görseli">
+          <p class="caption">Otonom sistem güvenliği</p>
+        </div>
+      </div>
+
+      <!-- 9 -->
+      <div class="flex-block">
+        <div class="text">
+          <h3>9. AI İnsan Kaynakları & Adil İşe Alım Uzmanı</h3>
+          <p>AI destekli işe alım araçlarının tarafsız çalışmasını sağlar; aday verilerini, eşleştirme algoritmalarını ve mülakat süreçlerini etik açıdan inceler ve düzeltir.</p>
+        </div>
+        <div class="img">
+          <img src="https://cdn.pixabay.com/photo/2022/03/11/02/31/artificial-intelligence-7061034_960_720.jpg" alt="İK ve işe alım görseli">
+          <p class="caption">Adil işe alım süreçleri</p>
+        </div>
+      </div>
+
+      <!-- 10 -->
+      <div class="flex-block reverse">
+        <div class="text">
+          <h3>10. Yapay Zeka Strateji & Ürün Uzmanı</h3>
+          <p>AI projelerini iş hedefleriyle hizalar; risk-ödül analizleri yapar. Ürün yol haritasına etik kontrolleri, kullanıcı gizliliğini ve sürdürülebilirliği entegre eder.</p>
+        </div>
+        <div class="img">
+          <img src="https://cdn.pixabay.com/photo/2020/04/02/22/34/artificial-intelligence-4995045_960_720.jpg" alt="Strateji uzmanı görseli">
+          <p class="caption">Ürün & strateji entegrasyonu</p>
+        </div>
+      </div>
+
+      <!-- 11 -->
+      <div class="flex-block">
+        <div class="text">
+          <h3>11. AI Veri Analisti & Açıklanabilirlik Uzmanı</h3>
+          <p>Model kararlarının açıklanabilirliğini artırır, veri kalitesini değerlendiren metrikler oluşturur ve modellerin adil performans göstermesi için iyileştirmeler önerir.</p>
+        </div>
+        <div class="img">
+          <img src="https://cdn.pixabay.com/photo/2017/08/01/00/59/analysis-2562325_960_720.jpg" alt="Veri analisti görseli">
+          <p class="caption">Açıklanabilirlik & performans</p>
+        </div>
+      </div>
+
+      <!-- 12 -->
+      <div class="flex-block reverse">
+        <div class="text">
+          <h3>12. AI Güvenlik Mühendisi</h3>
+          <p>Model hırsızlığı, adversarial ataklar ve veri sızıntılarına karşı güvenlik önlemleri tasarlar. Güvenli dağıtım, izleme ve hızlı müdahale planları oluşturur.</p>
+        </div>
+        <div class="img">
+          <img src="https://cdn.pixabay.com/photo/2020/02/14/06/17/cyber-security-4842584_960_720.jpg" alt="Güvenlik mühendisi görseli">
+          <p class="caption">Siber güvenlik & model koruması</p>
+        </div>
+      </div>
+
+      <!-- 13 -->
+      <div class="flex-block">
+        <div class="text">
+          <h3>13. AI Araştırma Bilimcisi</h3>
+          <p>Yeni algoritmalar, etik değerlendirme yöntemleri ve açıklanabilir AI yaklaşımları geliştirir. Akademik ve endüstriyel projelerde yenilikçi çözümler üretir.</p>
+        </div>
+        <div class="img">
+          <img src="https://cdn.pixabay.com/photo/2021/01/30/11/57/artificial-intelligence-5967032_960_720.jpg" alt="Araştırma bilimcisi görseli">
+          <p class="caption">Araştırma & yenilik</p>
+        </div>
+      </div>
+
+      <!-- 14 -->
+      <div class="flex-block reverse">
+        <div class="text">
+          <h3>14. AI Ürün Yöneticisi</h3>
+          <p>AI çözümlerinin geliştirilmesi ve pazara sunulması süreçlerini yönetir; kullanıcı geri bildirimlerini, etik değerlendirmeleri ve teknik kısıtları dengeleyerek ürün başarısını sağlar.</p>
+        </div>
+        <div class="img">
+          <img src="https://cdn.pixabay.com/photo/2016/12/13/22/07/brain-1907292_960_720.jpg" alt="Ürün yöneticisi görseli">
+          <p class="caption">Ürün yönetimi & koordinasyon</p>
+        </div>
+      </div>
+
+      <!-- 15 -->
+      <div class="flex-block">
+        <div class="text">
+          <h3>15. AI Sürdürülebilirlik Analisti</h3>
+          <p>AI altyapılarının çevresel etkilerini hesaplar; enerji verimliliği, model optimizasyonu ve karbon ayak izi azaltımı önerileri geliştirir. Sürdürülebilir yapay zeka uygulamalarını yaygınlaştırır.</p>
+        </div>
+        <div class="img">
+          <img src="https://cdn.pixabay.com/photo/2017/01/20/00/30/solar-1992860_960_720.jpg" alt="Sürdürülebilirlik analisti görseli">
+          <p class="caption">Enerji verimliliği & sürdürülebilirlik</p>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- TAKIM -->
+    <section id="takim" class="team-section" aria-labelledby="takim-baslik">
+      <h2 id="takim-baslik">Takım</h2>
+      <h3>Şirketimizde çalışan arkadaşlarımız</h3>
+
+      <div class="team-grid" role="list">
+        <div class="team-member" role="listitem">
+          <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Ayşe Yılmaz — Etik Uzmanı">
+          <p>Ayşe Yılmaz</p>
+        </div>
+        <div class="team-member" role="listitem">
+          <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Mehmet Kaya — Veri Güvenliği">
+          <p>Mehmet Kaya</p>
+        </div>
+        <div class="team-member" role="listitem">
+          <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Elif Demir — AI Eğitmeni">
+          <p>Elif Demir</p>
+        </div>
+        <div class="team-member" role="listitem">
+          <img src="https://randomuser.me/api/portraits/men/46.jpg" alt="Ali Çelik — Strateji">
+          <p>Ali Çelik</p>
+        </div>
+        <!-- istersen buraya daha fazla üye ekleyebilirsin -->
+      </div>
+    </section>
+
+    <!-- İLETİŞİM / FOOTER -->
+    <section id="iletisim" class="card center">
+      <h3>İletişim</h3>
+      <p class="muted">EtikZeka — Daha fazla bilgi için: <strong>info@etikzeka.example</strong></p>
+    </section>
+
+    <footer>
+      &copy; 2025 EtikZeka — Hazırlayan: Belinay Naldöven
+    </footer>
+
+  </div> <!-- container -->
+
+</body>
+</html>
