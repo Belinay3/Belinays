@@ -1,6 +1,10 @@
 # Belinays 
 ##Projemiz Ne İşe Yarıyor?:Bu projede ele alınan asıl konu yapay zekanın gelişmesiyle işsizliğin artması ve bazı mesleki alanlarda insanlardan çok yapay zekanın tercih edilmesi sebebiyle ortaya çıkan etik problemlerin üstesinden gelmektir.Yapay zekanı getirmiş olduğu sosyal medyada birçok ahlaki durum göz ardı edilmekte hatta toplumun yapısı bozulmaktadır.Bu proje hem toplum yapısının bozulmasını engellemek hem de kişilerin işsiz kalmamaları için başka bir meslek ortaya çıkarmaya yaramaktadır.
+
 ##Projenin Yaralı Olmasının Nedeni:Evrensel olarak sosyal medya etiğini korumak ve düzenlemek için çalışan bireyler alınıp kişilere iş imkanı sunacak meslekler rehberliği yapmak ve de yapa zekayı halka en faydalı şekilde sunmaktır.
+
 ##Kullanıcılar Projeye Nasıl Başlayabilir?:Kullanıcılar WEB sitemizde önerilen yapay zekayı korumak adına olan meslekler sayesinde hangi mesleği seçeceklerine karar verebilecek ve karar veren bireylerin bu mesleklerle ilgilenen şirketlere girmesi sonucunda yapay zeka etiği korumasına başlayacaklar ve bu alanda devamlı proje geliştirip halkın sosyal medya gibi araçları belirli sınırlar dahilinde yararlı ve etik eğlenceler ile bu medya araçlarını kullanımları sağlanabilecektir.
+
 ##Kullanıcıların Proje ile Yardım Alabileceği Yer:Şirketimizin ismiyle oluşturulan WEB (EtikZeka) sitemiz kullanıcılara meslekler hakkında bilgi vermektedir.
+
 ##Projeyi Sürdüren ve Katkıda Bulunan:Projeyi sürdüren Belinay Naldöven olarak aynı zamanada projeye katkıda bulunuyorum. Ayrıca anlaşmalı şirketler ve milli eğtim sayesinde oluşturulan meslekler de hayata geçiyor.
